@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -308,3 +309,271 @@ footer {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid white;
+}
+
+.logo {
+  width: 50px;
+  border-radius: 50%;
+  border: 0,0px solid #fff;    
+  padding: 2px;                  
+  box-shadow: 0 0 0 2px #fff;    
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: white;
+  color: black;
+}
+
+/* Home Section */
+.home {
+  text-align: left;
+  padding: 40px 20px;
+}
+
+.home h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.image-banner img {
+  width: 1315px;
+  height: 500px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* Portfolio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 20px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Atur ukuran gambar SATU PERSATU */
+.img-satu {
+  width: 286px;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.img-dua {
+  width: 286px;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.img-tiga {
+  width: 286px;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.profile-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-text {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  /* Gambar otomatis menyesuaikan di HP */
+  .img-satu,
+  .img-dua,
+  .img-tiga {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Message Section */
+.message {
+  padding: 40px 20px;
+}
+
+.message h2 {
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.message-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+}
+
+form {
+  background: white;
+  color: black;
+  padding: 25px 30px;
+  border-radius: 15px;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+form textarea {
+  resize: none;
+  height: 80px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #444;
+}
+
+
+.result {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+}
+
+.gif {
+  text-align: center;
+}
+
+.gif img {
+  width: 450px;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio, .message-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-container {
+    justify-content: center;
+  }
+
+  form, .result {
+    width: 90%;
+   }
+  }
