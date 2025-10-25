@@ -1,187 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To My Website</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome To My Website</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Navbar -->
+  <header>
+    <img src="img/logoo.jpeg" alt="Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Our Profile</a></li>
+        <li><a href="#portfolio">Visi/Misi</a></li>
+        <li><a href="#message">Message</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Navbar -->
-    <header>
-        <img src="img/logoo.jpeg" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Our Profile</a></li>
-                <li><a href="#portfolio">Visi/Misi</a></li>
-                <li><a href="#message">Message</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Section Home -->
+  <section id="home" class="home">
+    <h1 id="welcome-title">Welcome To Website</h1>
+    <p>Ini adalah website latihan pertama</p>
+    <div class="image-banner">
+      <img src="img/banner5.jpeg" alt="Banner" />
+    </div>
+  </section>
 
-    <!-- Section Home -->
-    <section id="home" class="home">
-        <h1 id="welcome-title">Welcome To Website</h1>
-        <p>Ini adalah website latihan pertama</p>
-        <div class="image-banner">
-            <img src="img/banner5.jpeg" alt="Banner">
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <h2>Our Profile</h2>
+    <div class="portfolio-container">
+      <img src="img/op1.jpeg" alt="Image 1" class="img-satu" />
+      <img src="img/op2.jpeg" alt="Image 2" class="img-dua" />
+      <img src="img/op3.jpeg" alt="Image 3" class="img-tiga" />
+    </div>
+    <div class="profile-text">
+      <p>
+        Saya adalah seorang Digital Creative yang berfokus pada Video Editing, Desain Grafis, dan Digital Art.
+        Dengan rasa ingin tahu tinggi dan perhatian pada detail, saya berkomitmen untuk mengubah ide menjadi karya visual yang bermakna dan komunikatif.
+        <br /><br />
+        <strong>Visi:</strong> menciptakan karya yang tidak hanya indah secara visual, tetapi juga menyampaikan pesan dengan kuat.<br />
+        <strong>Misi:</strong> terus berinovasi dan menghadirkan kreativitas di setiap karya.
+      </p>
+    </div>
+  </section>
+
+  <!-- Message Section -->
+  <section id="message" class="message">
+    <h2>Message Us</h2>
+    <div class="message-container">
+      <form id="messageForm">
+        <label>Nama</label>
+        <input type="text" id="nama" required />
+
+        <label>Tanggal Lahir</label>
+        <input type="date" id="tgl" required />
+
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Laki-Laki" required /> Laki-Laki</label>
+          <label><input type="radio" name="gender" value="Perempuan" required /> Perempuan</label>
         </div>
-    </section>
 
-    <!-- Portofolio -->
-    <section id="portfolio" class="portfolio">
-  <div class="portfolio-container">
-    <img src="img/op1.jpeg" alt="Image 1" class="img-satu">
-    <img src="img/op2.jpeg" alt="Image 2" class="img-dua">
-    <img src="img/op3.jpeg" alt="Image 3" class="img-tiga">
-  </div>
-  <div class="profile-text">
-    <h1>Our Profile</h1>
-    <p>
-     Saya adalah seorang Digital Creative yang berfokus pada Video Editing, Desain Grafis, dan Digital Art. Dengan rasa ingin tahu tinggi dan perhatian pada detail, saya berkomitmen untuk mengubah ide menjadi karya visual yang bermakna dan komunikatif.
-Visi saya adalah menciptakan karya yang tidak hanya indah secara visual, tetapi juga mampu menyampaikan pesan dengan kuat, melalui misi untuk terus berinovasi dan menghadirkan kreativitas di setiap karya. 
-    </p>
-  </div>
-</section>
+        <label>Pesan</label>
+        <textarea id="pesan" required></textarea>
 
+        <button type="submit">Submit</button>
+      </form>
 
-    <!-- Section Message -->
-    <section id="message" class="message">
-        <h2>Message Us</h2>
-        <div class="message-container">
-            <form id="messageForm">
-                <label>Nama</label>
-                <input type="text" id="nama" required>
+      <div class="result">
+        <p id="time"></p>
+        <p id="hasil-nama"></p>
+        <p id="hasil-tgl"></p>
+        <p id="hasil-gender"></p>
+        <p id="hasil-pesan"></p>
+      </div>
 
-                <label>Tanggal Lahir</label>
-                <input type="date" id="tgl" required>
+      <div class="gif">
+        <img src="img/BLACK.gif" alt="BLACK" />
+      </div>
+    </div>
+  </section>
 
-                <label>Jenis Kelamin</label>
-<div class="radio-group">
-  <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
-  <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
-</div>
+  <footer>
+    <p>Created by NUZI</p>
+  </footer>
 
-
-                <label>Pesan</label>
-                <textarea id="pesan" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-
-            <div class="result">
-                <p id="time"></p>
-                <p id="hasil-nama"></p>
-                <p id="hasil-tgl"></p>
-                <p id="hasil-gender"></p>
-                <p id="hasil-pesan"></p>
-            </div>
-
-            <div class="gif">
-                <img src="img/BLACK.gif"alt="BLACK">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Created by NUZI</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To My Website</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- Navbar -->
-    <header>
-        <img src="img/logoo.jpeg" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Our Profile</a></li>
-                <li><a href="#portfolio">Visi/Misi</a></li>
-                <li><a href="#message">Message</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Section Home -->
-    <section id="home" class="home">
-        <h1 id="welcome-title">Welcome To Website</h1>
-        <p>Ini adalah website latihan pertama</p>
-        <div class="image-banner">
-            <img src="img/banner5.jpeg" alt="Banner">
-        </div>
-    </section>
-
-    <!-- Portofolio -->
-    <section id="portfolio" class="portfolio">
-  <div class="portfolio-container">
-    <img src="img/op1.jpeg" alt="Image 1" class="img-satu">
-    <img src="img/op2.jpeg" alt="Image 2" class="img-dua">
-    <img src="img/op3.jpeg" alt="Image 3" class="img-tiga">
-  </div>
-  <div class="profile-text">
-    <h1>Our Profile</h1>
-    <p>
-     Saya adalah seorang Digital Creative yang berfokus pada Video Editing, Desain Grafis, dan Digital Art. Dengan rasa ingin tahu tinggi dan perhatian pada detail, saya berkomitmen untuk mengubah ide menjadi karya visual yang bermakna dan komunikatif.
-Visi saya adalah menciptakan karya yang tidak hanya indah secara visual, tetapi juga mampu menyampaikan pesan dengan kuat, melalui misi untuk terus berinovasi dan menghadirkan kreativitas di setiap karya. 
-    </p>
-  </div>
-</section>
-
-
-    <!-- Section Message -->
-    <section id="message" class="message">
-        <h2>Message Us</h2>
-        <div class="message-container">
-            <form id="messageForm">
-                <label>Nama</label>
-                <input type="text" id="nama" required>
-
-                <label>Tanggal Lahir</label>
-                <input type="date" id="tgl" required>
-
-                <label>Jenis Kelamin</label>
-<div class="radio-group">
-  <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
-  <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
-</div>
-
-
-                <label>Pesan</label>
-                <textarea id="pesan" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-
-            <div class="result">
-                <p id="time"></p>
-                <p id="hasil-nama"></p>
-                <p id="hasil-tgl"></p>
-                <p id="hasil-gender"></p>
-                <p id="hasil-pesan"></p>
-            </div>
-
-            <div class="gif">
-                <img src="img/BLACK.gif"alt="BLACK">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Created by NUZI</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
